@@ -57,17 +57,17 @@ Here you can list the main routes of your API, and what are their expected reque
 ​
 | route | description  
 |----------------------|-----------------------------------------------------
-| <kbd>POST /api/users/login</kbd> | retrieves a token with the user id [response details](#post-login-detail)
-| <kbd>GET /get/food</kbd> | get all foods that are on the database [request details](#get-food-detail)
+| <kbd>POST /encurtar </kbd> | encode the url and save a expiration date. [see response details](#encode-url-details)
+| <kbd>GET /{urlEncurtada}</kbd> | get the encoded website [see request details](#get-encoded-url)
 
-<h3 id="post-login-detail">POST LOGIN</h3>
+<h3 id="encode-url-details">ENCODE URL</h3>
 
 **REQUEST**
 
 ```json
 {
-  "email": "anthoni@teste.com",
-  "password": "4444444"
+  "urlAntiga": "https://google.com.br",
+  "expiresIn": 1
 }
 ```
 
@@ -75,8 +75,16 @@ Here you can list the main routes of your API, and what are their expected reque
 
 ```json
 {
-  "token": "encoded token"
+  "url": "http://localhost:3333/1530015"
 }
+```
+
+<h3 id="encode-url-details">ACCESS ENCODED</h3>
+
+**RESPONSE**
+
+```json
+html website
 ```
 
 <h2 id="colab">🤝 Developers </h2>
